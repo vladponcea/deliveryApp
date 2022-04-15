@@ -53,60 +53,14 @@ struct HomeView: View {
                     .ignoresSafeArea(edges: .top)
                 
                 ScrollView(.vertical, showsIndicators: false) {
+                    
+                    //grid buttons
                     VStack(spacing: 16) {
-                        Image("food1")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(height: 160)
-                            .clipped()
-                            .cornerRadius(16)
-                            .shadow(radius: 5)
-                            .overlay(
-                                ZStack(alignment: .bottomLeading) {
-                                    LinearGradient(colors: [.clear, .black.opacity(0.5)], startPoint: .top, endPoint: .bottom)
-                                        .cornerRadius(16)
-                                    
-                                    VStack(alignment: .leading) {
-                                        Text("Food")
-                                            .font(.title3)
-                                            .foregroundColor(.white)
-                                        Text("Order food you love")
-                                            .font(.caption)
-                                            .foregroundColor(.white)
-                                    }
-                                    .padding()
-                                }
-                            )
-                        
-                        HStack(spacing: 16) {
-                            Image("food2")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: (UIScreen.main.bounds.width - 64) / 2,height: 160)
-                                .clipped()
-                                .cornerRadius(16)
-                                .shadow(radius: 5)
-                                .overlay(
-                                    ZStack(alignment: .bottomLeading) {
-                                        LinearGradient(colors: [.clear, .black.opacity(0.5)], startPoint: .top, endPoint: .bottom)
-                                            .cornerRadius(16)
-                                        
-                                        VStack(alignment: .leading) {
-                                            Text("Food")
-                                                .font(.title3)
-                                                .foregroundColor(.white)
-                                            Text("Order food you love")
-                                                .font(.caption)
-                                                .foregroundColor(.white)
-                                        }
-                                        .padding()
-                                    }
-                                )
-                            
+                        Button(action: {}, label: {
                             Image("food1")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: (UIScreen.main.bounds.width - 64) / 2,height: 160)
+                                .frame(height: 160)
                                 .clipped()
                                 .cornerRadius(16)
                                 .shadow(radius: 5)
@@ -126,22 +80,84 @@ struct HomeView: View {
                                         .padding()
                                     }
                                 )
+                        })
+                        
+                        HStack(spacing: 16) {
+                            Button(action: {}, label: {
+                                Image("food2")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: (UIScreen.main.bounds.width - 64) / 2,height: 160)
+                                    .clipped()
+                                    .cornerRadius(16)
+                                    .shadow(radius: 5)
+                                    .overlay(
+                                        ZStack(alignment: .bottomLeading) {
+                                            LinearGradient(colors: [.clear, .black.opacity(0.5)], startPoint: .top, endPoint: .bottom)
+                                                .cornerRadius(16)
+                                            
+                                            VStack(alignment: .leading) {
+                                                Text("Food")
+                                                    .font(.title3)
+                                                    .foregroundColor(.white)
+                                                Text("Order food you love")
+                                                    .font(.caption)
+                                                    .foregroundColor(.white)
+                                            }
+                                            .padding()
+                                        }
+                                    )
+                            })
+                            
+                            Button(action: {}, label: {
+                                Image("food1")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: (UIScreen.main.bounds.width - 64) / 2,height: 160)
+                                    .clipped()
+                                    .cornerRadius(16)
+                                    .shadow(radius: 5)
+                                    .overlay(
+                                        ZStack(alignment: .bottomLeading) {
+                                            LinearGradient(colors: [.clear, .black.opacity(0.5)], startPoint: .top, endPoint: .bottom)
+                                                .cornerRadius(16)
+                                            
+                                            VStack(alignment: .leading) {
+                                                Text("Food")
+                                                    .font(.title3)
+                                                    .foregroundColor(.white)
+                                                Text("Order food you love")
+                                                    .font(.caption)
+                                                    .foregroundColor(.white)
+                                            }
+                                            .padding()
+                                        }
+                                    )
+                            })
                         }
                         
                     }
                     .padding()
                     
+                    //scrollview with restaurant ads
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            FoodCardView(image: "food4", text: "Food", description: "Order food you love")
+                            Button(action: {}, label: {
+                                FoodCardView(image: "food4", text: "Food", description: "Order food you love")
+                            })
                             
-                            FoodCardView(image: "food2", text: "Food", description: "Order food you love")
+                            Button(action: {}, label: {
+                                FoodCardView(image: "food2", text: "Food", description: "Order food you love")
+                            })
                             
-                            FoodCardView(image: "food1", text: "Food", description: "Order food you love")
+                            Button(action: {}, label: {
+                                FoodCardView(image: "food1", text: "Food", description: "Order food you love")
+                            })
                         }
                     }
                     .padding()
                     
+                    //deals button
                     Button(action: {}, label: {
                         HStack {
                             Text("Deals")
@@ -160,15 +176,24 @@ struct HomeView: View {
                         .padding(.horizontal)
                     })
                     
+                    //deals scrollview
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 16) {
-                            DealsCardView(image: "food1", deliveryTime: 40, restaurantName: "Daily Deli", rating: 4.8, location: "Johar Town")
+                            Button(action: {}, label: {
+                                DealsCardView(image: "food1", deliveryTime: 40, restaurantName: "Daily Deli", rating: 4.8, location: "Johar Town")
+                            })
                             
-                            DealsCardView(image: "food4", deliveryTime: 40, restaurantName: "Daily Deli", rating: 4.8, location: "Johar Town")
+                            Button(action: {}, label: {
+                                DealsCardView(image: "food4", deliveryTime: 40, restaurantName: "Daily Deli", rating: 4.8, location: "Johar Town")
+                            })
                             
-                            DealsCardView(image: "food2", deliveryTime: 40, restaurantName: "Daily Deli", rating: 4.8, location: "Johar Town")
+                            Button(action: {}, label: {
+                                DealsCardView(image: "food2", deliveryTime: 40, restaurantName: "Daily Deli", rating: 4.8, location: "Johar Town")
+                            })
                             
-                            DealsCardView(image: "food1", deliveryTime: 40, restaurantName: "Daily Deli", rating: 4.8, location: "Johar Town")
+                            Button(action: {}, label: {
+                                DealsCardView(image: "food1", deliveryTime: 40, restaurantName: "Daily Deli", rating: 4.8, location: "Johar Town")
+                            })
                         }
                     }
                     .padding(.horizontal)
