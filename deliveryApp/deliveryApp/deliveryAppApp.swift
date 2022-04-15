@@ -11,7 +11,8 @@ import SwiftUI
 struct deliveryAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+                .preferredColorScheme(.light)
         }
     }
 }
