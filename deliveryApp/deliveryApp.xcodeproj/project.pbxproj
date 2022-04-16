@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E5BD0CB280A0B61000544DA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BD0CA280A0B61000544DA /* HomeView.swift */; };
 		4E5BD0CE280A0B88000544DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BD0CD280A0B88000544DA /* Constants.swift */; };
+		4E5BD0D0280AD699000544DA /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BD0CF280AD699000544DA /* RestaurantView.swift */; };
 		4ECCB2C22809BEBA0046A0A3 /* deliveryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCB2C12809BEBA0046A0A3 /* deliveryAppApp.swift */; };
 		4ECCB2C62809BEBB0046A0A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECCB2C52809BEBB0046A0A3 /* Assets.xcassets */; };
 		4ECCB2C92809BEBB0046A0A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECCB2C82809BEBB0046A0A3 /* Preview Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* Begin PBXFileReference section */
 		4E5BD0CA280A0B61000544DA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4E5BD0CD280A0B88000544DA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4E5BD0CF280AD699000544DA /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
 		4ECCB2BE2809BEBA0046A0A3 /* deliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECCB2C12809BEBA0046A0A3 /* deliveryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deliveryAppApp.swift; sourceTree = "<group>"; };
 		4ECCB2C52809BEBB0046A0A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 			isa = PBXGroup;
 			children = (
 				4E5BD0CA280A0B61000544DA /* HomeView.swift */,
+				4E5BD0CF280AD699000544DA /* RestaurantView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				4E5BD0CB280A0B61000544DA /* HomeView.swift in Sources */,
 				4ECCB2C22809BEBA0046A0A3 /* deliveryAppApp.swift in Sources */,
 				4E5BD0CE280A0B88000544DA /* Constants.swift in Sources */,
+				4E5BD0D0280AD699000544DA /* RestaurantView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
