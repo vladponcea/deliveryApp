@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E296C6F280E01510080E9BF /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E296C6E280E01510080E9BF /* FoodView.swift */; };
+		4E296C72280E01F30080E9BF /* RestaurantTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E296C71280E01F30080E9BF /* RestaurantTopBarView.swift */; };
+		4E296C75280E185F0080E9BF /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E296C74280E185F0080E9BF /* FoodModel.swift */; };
+		4E296C77280E1A790080E9BF /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E296C76280E1A790080E9BF /* RestaurantModel.swift */; };
 		4E5BD0CB280A0B61000544DA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BD0CA280A0B61000544DA /* HomeView.swift */; };
 		4E5BD0CE280A0B88000544DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BD0CD280A0B88000544DA /* Constants.swift */; };
 		4E5BD0D0280AD699000544DA /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BD0CF280AD699000544DA /* RestaurantView.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E296C6E280E01510080E9BF /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
+		4E296C71280E01F30080E9BF /* RestaurantTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTopBarView.swift; sourceTree = "<group>"; };
+		4E296C74280E185F0080E9BF /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		4E296C76280E1A790080E9BF /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 		4E5BD0CA280A0B61000544DA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4E5BD0CD280A0B88000544DA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4E5BD0CF280AD699000544DA /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
@@ -36,11 +44,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E296C70280E01E50080E9BF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4E296C71280E01F30080E9BF /* RestaurantTopBarView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4E296C73280E18550080E9BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4E296C74280E185F0080E9BF /* FoodModel.swift */,
+				4E296C76280E1A790080E9BF /* RestaurantModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4E5BD0C9280A0B02000544DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4E296C70280E01E50080E9BF /* Components */,
 				4E5BD0CA280A0B61000544DA /* HomeView.swift */,
 				4E5BD0CF280AD699000544DA /* RestaurantView.swift */,
+				4E296C6E280E01510080E9BF /* FoodView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -72,6 +99,7 @@
 		4ECCB2C02809BEBA0046A0A3 /* deliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				4E296C73280E18550080E9BF /* Models */,
 				4E5BD0CC280A0B7F000544DA /* Constants */,
 				4E5BD0C9280A0B02000544DA /* Views */,
 				4ECCB2C12809BEBA0046A0A3 /* deliveryAppApp.swift */,
@@ -160,9 +188,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E5BD0CB280A0B61000544DA /* HomeView.swift in Sources */,
+				4E296C6F280E01510080E9BF /* FoodView.swift in Sources */,
+				4E296C77280E1A790080E9BF /* RestaurantModel.swift in Sources */,
 				4ECCB2C22809BEBA0046A0A3 /* deliveryAppApp.swift in Sources */,
 				4E5BD0CE280A0B88000544DA /* Constants.swift in Sources */,
 				4E5BD0D0280AD699000544DA /* RestaurantView.swift in Sources */,
+				4E296C72280E01F30080E9BF /* RestaurantTopBarView.swift in Sources */,
+				4E296C75280E185F0080E9BF /* FoodModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
