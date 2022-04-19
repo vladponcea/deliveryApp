@@ -13,7 +13,7 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            ZStack {
+            ZStack(alignment: .bottomTrailing) {
                 VStack {
                     //topbar
                     Rectangle()
@@ -226,6 +226,41 @@ struct HomeView: View {
                     .ignoresSafeArea()
                 }
                 .frame(width: UIScreen.main.bounds.width - Constants.defaultPadding)
+                
+                NavigationLink(destination: {
+                    CartView()
+                        .navigationTitle("")
+                        .navigationBarHidden(true)
+                        .navigationBarBackButtonHidden(true)
+                        .environmentObject(CartViewModel())
+                }, label: {
+                    Circle()
+                        .fill(.pink)
+                        .frame(width: 58, height: 58)
+                        .overlay(alignment: .center, content: {
+                            Image(systemName: "cart")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 22, height: 22)
+                                .foregroundColor(.white)
+                        })
+                        .overlay(alignment: .topTrailing, content: {
+                            Circle()
+                                .fill(.black)
+                                .frame(width: 22, height: 22)
+                                .overlay(
+                                    Text("4")
+                                        .font(.system(size: 17))
+                                        .fontWeight(.regular)
+                                        .foregroundColor(.white)
+                                )
+                                .padding(-5)
+                        })
+                        .padding()
+                        .clipped()
+                        .shadow(color: .black.opacity(0.25), radius: 5)
+                })
+                
             }
             .navigationTitle("")
             .navigationBarHidden(true)
@@ -238,6 +273,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(CartViewModel())
     }
 }
 
