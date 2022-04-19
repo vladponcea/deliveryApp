@@ -19,26 +19,7 @@ struct CartView: View {
         ZStack {
             VStack(spacing: 0) {
                 //topbar
-                HStack(spacing: 12) {
-                    Button(action: {
-                        presentationMode.wrappedValue.dismiss()
-                    }, label: {
-                        Image(systemName: "chevron.left")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 10, height: 10)
-                            .foregroundColor(.black)
-                    })
-                    
-                    Text("Cart")
-                        .font(.system(size: 17))
-                        .fontWeight(.semibold)
-                        .foregroundColor(.black)
-                    
-                    Spacer()
-                }
-                .frame(height: 50)
-                .padding(.top, 50)
+                TopBarView(text: "Cart")
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
@@ -271,7 +252,12 @@ struct CartView: View {
                                 
                                 Spacer()
                                 
-                                Button(action: {}, label: {
+                                NavigationLink(destination: {
+                                    CheckoutView()
+                                        .navigationBarTitle("")
+                                        .navigationBarHidden(true)
+                                        .navigationBarBackButtonHidden(true)
+                                }, label: {
                                     RoundedRectangle(cornerRadius: 16)
                                         .fill(.pink)
                                         .frame(width: UIScreen.main.bounds.width - Constants.defaultPadding - 155, height: 55)

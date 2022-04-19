@@ -14,6 +14,12 @@
 		4E296C79280EAFAC0080E9BF /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E296C78280EAFAC0080E9BF /* CartView.swift */; };
 		4E296C7B280EB1440080E9BF /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E296C7A280EB1440080E9BF /* CartModel.swift */; };
 		4E296C7E280EB1D90080E9BF /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E296C7D280EB1D90080E9BF /* CartViewModel.swift */; };
+		4E296C83280EC7DC0080E9BF /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E296C82280EC7DC0080E9BF /* TopBarView.swift */; };
+		4E296C85280EC83F0080E9BF /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E296C84280EC83F0080E9BF /* CheckoutView.swift */; };
+		4E296C87280ECB9A0080E9BF /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E296C86280ECB9A0080E9BF /* PaymentModel.swift */; };
+		4E296C89280ED0FC0080E9BF /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E296C88280ED0FC0080E9BF /* UserViewModel.swift */; };
+		4E296C8B280EED5A0080E9BF /* OrderCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E296C8A280EED5A0080E9BF /* OrderCompleteView.swift */; };
+		4E296C8D280EF1920080E9BF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E296C8C280EF1920080E9BF /* ProfileView.swift */; };
 		4E5BD0CB280A0B61000544DA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BD0CA280A0B61000544DA /* HomeView.swift */; };
 		4E5BD0CE280A0B88000544DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BD0CD280A0B88000544DA /* Constants.swift */; };
 		4E5BD0D0280AD699000544DA /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BD0CF280AD699000544DA /* RestaurantView.swift */; };
@@ -30,6 +36,12 @@
 		4E296C78280EAFAC0080E9BF /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		4E296C7A280EB1440080E9BF /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
 		4E296C7D280EB1D90080E9BF /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		4E296C82280EC7DC0080E9BF /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
+		4E296C84280EC83F0080E9BF /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		4E296C86280ECB9A0080E9BF /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
+		4E296C88280ED0FC0080E9BF /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		4E296C8A280EED5A0080E9BF /* OrderCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompleteView.swift; sourceTree = "<group>"; };
+		4E296C8C280EF1920080E9BF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4E5BD0CA280A0B61000544DA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4E5BD0CD280A0B88000544DA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4E5BD0CF280AD699000544DA /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
@@ -54,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				4E296C71280E01F30080E9BF /* RestaurantTopBarView.swift */,
+				4E296C82280EC7DC0080E9BF /* TopBarView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -64,6 +77,7 @@
 				4E296C74280E185F0080E9BF /* FoodModel.swift */,
 				4E296C76280E1A790080E9BF /* RestaurantModel.swift */,
 				4E296C7A280EB1440080E9BF /* CartModel.swift */,
+				4E296C86280ECB9A0080E9BF /* PaymentModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -72,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				4E296C7D280EB1D90080E9BF /* CartViewModel.swift */,
+				4E296C88280ED0FC0080E9BF /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -84,6 +99,9 @@
 				4E5BD0CF280AD699000544DA /* RestaurantView.swift */,
 				4E296C6E280E01510080E9BF /* FoodView.swift */,
 				4E296C78280EAFAC0080E9BF /* CartView.swift */,
+				4E296C84280EC83F0080E9BF /* CheckoutView.swift */,
+				4E296C8A280EED5A0080E9BF /* OrderCompleteView.swift */,
+				4E296C8C280EF1920080E9BF /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,14 +224,20 @@
 			files = (
 				4E296C79280EAFAC0080E9BF /* CartView.swift in Sources */,
 				4E5BD0CB280A0B61000544DA /* HomeView.swift in Sources */,
+				4E296C8B280EED5A0080E9BF /* OrderCompleteView.swift in Sources */,
 				4E296C6F280E01510080E9BF /* FoodView.swift in Sources */,
 				4E296C77280E1A790080E9BF /* RestaurantModel.swift in Sources */,
+				4E296C87280ECB9A0080E9BF /* PaymentModel.swift in Sources */,
 				4ECCB2C22809BEBA0046A0A3 /* deliveryAppApp.swift in Sources */,
 				4E296C7B280EB1440080E9BF /* CartModel.swift in Sources */,
 				4E5BD0CE280A0B88000544DA /* Constants.swift in Sources */,
+				4E296C8D280EF1920080E9BF /* ProfileView.swift in Sources */,
+				4E296C85280EC83F0080E9BF /* CheckoutView.swift in Sources */,
+				4E296C83280EC7DC0080E9BF /* TopBarView.swift in Sources */,
 				4E5BD0D0280AD699000544DA /* RestaurantView.swift in Sources */,
 				4E296C72280E01F30080E9BF /* RestaurantTopBarView.swift in Sources */,
 				4E296C75280E185F0080E9BF /* FoodModel.swift in Sources */,
+				4E296C89280ED0FC0080E9BF /* UserViewModel.swift in Sources */,
 				4E296C7E280EB1D90080E9BF /* CartViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

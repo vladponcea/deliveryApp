@@ -13,6 +13,8 @@ struct deliveryAppApp: App {
         WindowGroup {
             HomeView()
                 .preferredColorScheme(.light)
+                .environmentObject(UserViewModel())
+                .environmentObject(CartViewModel())
         }
     }
 }
