@@ -32,7 +32,7 @@ struct TopBarView: View {
             
             Spacer()
         }
-        .frame(height: 50)
+        .frame(width: UIScreen.main.bounds.width - Constants.defaultPadding, height: 50)
         .padding(.top, 50)
     }
 }

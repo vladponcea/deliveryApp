@@ -11,7 +11,7 @@ import SwiftUI
 struct deliveryAppApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            HomePageView()
                 .preferredColorScheme(.light)
                 .environmentObject(UserViewModel())
                 .environmentObject(CartViewModel())

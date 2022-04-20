@@ -44,7 +44,7 @@ struct OrderCompleteView: View {
                 
                 
                 NavigationLink(destination: {
-                    HomeView()
+                    HomePageView()
                         .navigationBarTitle("")
                         .navigationBarHidden(true)
                         .navigationBarBackButtonHidden(true)

@@ -9,4 +9,7 @@ import Foundation
 
 class UserViewModel: ObservableObject {
     @Published var paymentMethods: [PaymentModel] = paymentMethodsExamples
+    @Published var savedRestaurants: [Restaurant] = restaurantsExamples
+    @Published var notifications: [Notification] = notificationsExamples
+    @Published var orders: [Order] = ordersExamples
 }

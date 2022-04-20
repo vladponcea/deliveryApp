@@ -12,57 +12,83 @@ struct HomeView: View {
     @State var searchText: String = ""
     
     var body: some View {
-        NavigationView {
-            ZStack(alignment: .bottomTrailing) {
-                VStack {
-                    //topbar
-                    Rectangle()
-                        .fill(.pink)
-                        .frame(width: UIScreen.main.bounds.width, height: 170)
-                        .overlay(alignment: .bottom, content: {
-                            VStack {
-                                HStack {
-                                    Image(systemName: "mappin.circle")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 22, height: 22)
-                                        .foregroundColor(.white)
-                                    
-                                    
-                                    Text("Dunarii 51, Rosiori de Vede")
-                                        .font(.system(size: 17))
-                                        .fontWeight(.medium)
-                                        .foregroundColor(.white)
-                                    
-                                }
-                                .frame(width: UIScreen.main.bounds.width - Constants.defaultPadding)
-                                
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(.white)
-                                    .frame(width: UIScreen.main.bounds.width - Constants.defaultPadding, height: 54)
-                                    .overlay(
-                                        HStack {
-                                            Image(systemName: "magnifyingglass")
-                                                .foregroundColor(.gray)
-                                            
-                                            TextField("Search...", text: $searchText)
-                                        }
-                                            .padding()
-                                    )
-                            }
-                            .padding()
-                        })
-                        .ignoresSafeArea(edges: .top)
-                    
-                    ScrollView(.vertical, showsIndicators: false) {
-                        
-                        //grid buttons
-                        VStack(spacing: 16) {
-                            Button(action: {}, label: {
-                                Image("food1")
+        ZStack(alignment: .bottomTrailing) {
+            VStack(spacing: 0) {
+                //topbar
+                Rectangle()
+                    .fill(.pink)
+                    .frame(width: UIScreen.main.bounds.width, height: 170)
+                    .overlay(alignment: .bottom, content: {
+                        VStack {
+                            HStack {
+                                Image(systemName: "mappin.circle")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
-                                    .frame(height: 160)
+                                    .frame(width: 22, height: 22)
+                                    .foregroundColor(.white)
+                                
+                                
+                                Text("Dunarii 51, Rosiori de Vede")
+                                    .font(.system(size: 17))
+                                    .fontWeight(.medium)
+                                    .foregroundColor(.white)
+                                
+                            }
+                            .frame(width: UIScreen.main.bounds.width - Constants.defaultPadding)
+                            
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill(.white)
+                                .frame(width: UIScreen.main.bounds.width - Constants.defaultPadding, height: 54)
+                                .overlay(
+                                    HStack {
+                                        Image(systemName: "magnifyingglass")
+                                            .foregroundColor(.gray)
+                                        
+                                        TextField("Search...", text: $searchText)
+                                    }
+                                        .padding()
+                                )
+                        }
+                        .padding()
+                    })
+                    .ignoresSafeArea(edges: .top)
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    
+                    //grid buttons
+                    VStack(spacing: 16) {
+                        Button(action: {}, label: {
+                            Image("food1")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(height: 160)
+                                .clipped()
+                                .cornerRadius(16)
+                                .shadow(radius: 5)
+                                .overlay(
+                                    ZStack(alignment: .bottomLeading) {
+                                        LinearGradient(colors: [.clear, .black.opacity(0.5)], startPoint: .top, endPoint: .bottom)
+                                            .cornerRadius(16)
+                                        
+                                        VStack(alignment: .leading) {
+                                            Text("Food")
+                                                .font(.title3)
+                                                .foregroundColor(.white)
+                                            Text("Order food you love")
+                                                .font(.caption)
+                                                .foregroundColor(.white)
+                                        }
+                                        .padding()
+                                    }
+                                )
+                        })
+                        
+                        HStack(spacing: 16) {
+                            Button(action: {}, label: {
+                                Image("food2")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: (UIScreen.main.bounds.width - 64) / 2,height: 160)
                                     .clipped()
                                     .cornerRadius(16)
                                     .shadow(radius: 5)
@@ -84,131 +110,39 @@ struct HomeView: View {
                                     )
                             })
                             
-                            HStack(spacing: 16) {
-                                Button(action: {}, label: {
-                                    Image("food2")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: (UIScreen.main.bounds.width - 64) / 2,height: 160)
-                                        .clipped()
-                                        .cornerRadius(16)
-                                        .shadow(radius: 5)
-                                        .overlay(
-                                            ZStack(alignment: .bottomLeading) {
-                                                LinearGradient(colors: [.clear, .black.opacity(0.5)], startPoint: .top, endPoint: .bottom)
-                                                    .cornerRadius(16)
-                                                
-                                                VStack(alignment: .leading) {
-                                                    Text("Food")
-                                                        .font(.title3)
-                                                        .foregroundColor(.white)
-                                                    Text("Order food you love")
-                                                        .font(.caption)
-                                                        .foregroundColor(.white)
-                                                }
-                                                .padding()
-                                            }
-                                        )
-                                })
-                                
-                                Button(action: {}, label: {
-                                    Image("food1")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: (UIScreen.main.bounds.width - 64) / 2,height: 160)
-                                        .clipped()
-                                        .cornerRadius(16)
-                                        .shadow(radius: 5)
-                                        .overlay(
-                                            ZStack(alignment: .bottomLeading) {
-                                                LinearGradient(colors: [.clear, .black.opacity(0.5)], startPoint: .top, endPoint: .bottom)
-                                                    .cornerRadius(16)
-                                                
-                                                VStack(alignment: .leading) {
-                                                    Text("Food")
-                                                        .font(.title3)
-                                                        .foregroundColor(.white)
-                                                    Text("Order food you love")
-                                                        .font(.caption)
-                                                        .foregroundColor(.white)
-                                                }
-                                                .padding()
-                                            }
-                                        )
-                                })
-                            }
-                            
-                        }
-                        .padding()
-                        
-                        //scrollview with restaurant ads
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                ForEach(restaurantsExamples) { restaurant in
-                                    NavigationLink(destination: {
-                                        RestaurantView(restaurant: restaurant, categorySelected: restaurant.categories[0])
-                                            .navigationTitle("")
-                                            .navigationBarHidden(true)
-                                            .navigationBarBackButtonHidden(true)
-                                    }, label: {
-                                        FoodCardView(image: restaurant.image, text: restaurant.name, description: restaurant.desc)
-                                    })
-                                }
-                            }
-                        }
-                        .padding()
-                        
-                        //deals button
-                        Button(action: {}, label: {
-                            HStack {
-                                Text("Deals")
-                                    .font(.system(size: 17))
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.black)
-                                
-                                Spacer()
-                                
-                                Image(systemName: "chevron.right")
+                            Button(action: {}, label: {
+                                Image("food1")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
-                                    .frame(width: 10, height: 10)
-                                    .foregroundColor(.black)
-                            }
-                            .padding(.horizontal)
-                        })
-                        
-                        //deals scrollview
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                ForEach(restaurantsExamples) { restaurant in
-                                    NavigationLink(destination: {
-                                        RestaurantView(restaurant: restaurant, categorySelected: restaurant.categories[0])
-                                            .navigationTitle("")
-                                            .navigationBarHidden(true)
-                                            .navigationBarBackButtonHidden(true)
-                                    }, label: {
-                                        DealsCardView(image: restaurant.image, deliveryTime: restaurant.deliveryTime, restaurantName: restaurant.name, rating: restaurant.rating, location: restaurant.location)
-                                    })
-                                }
-                            }
+                                    .frame(width: (UIScreen.main.bounds.width - 64) / 2,height: 160)
+                                    .clipped()
+                                    .cornerRadius(16)
+                                    .shadow(radius: 5)
+                                    .overlay(
+                                        ZStack(alignment: .bottomLeading) {
+                                            LinearGradient(colors: [.clear, .black.opacity(0.5)], startPoint: .top, endPoint: .bottom)
+                                                .cornerRadius(16)
+                                            
+                                            VStack(alignment: .leading) {
+                                                Text("Food")
+                                                    .font(.title3)
+                                                    .foregroundColor(.white)
+                                                Text("Order food you love")
+                                                    .font(.caption)
+                                                    .foregroundColor(.white)
+                                            }
+                                            .padding()
+                                        }
+                                    )
+                            })
                         }
-                        .padding()
                         
-                        //explore more
-                        Button(action: {}, label: {
-                            HStack {
-                                Text("Explore More")
-                                    .font(.system(size: 17))
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.black)
-                                
-                                Spacer()
-                            }
-                        })
-                        .padding(.horizontal)
-                        .padding(.top, 30)
-                        
-                        VStack {
+                    }
+                    .padding()
+                    
+                    //scrollview with restaurant ads
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
                             ForEach(restaurantsExamples) { restaurant in
                                 NavigationLink(destination: {
                                     RestaurantView(restaurant: restaurant, categorySelected: restaurant.categories[0])
@@ -216,55 +150,118 @@ struct HomeView: View {
                                         .navigationBarHidden(true)
                                         .navigationBarBackButtonHidden(true)
                                 }, label: {
-                                    ExploreMoreCardView(image: restaurant.image, deliveryTime: restaurant.deliveryTime, restaurantName: restaurant.name, location: restaurant.location, rating: restaurant.rating)
+                                    FoodCardView(image: restaurant.image, text: restaurant.name, description: restaurant.desc)
                                 })
                             }
                         }
-                        .padding(.horizontal)
                     }
-                    .offset(y: -(UIScreen.main.bounds.height / 20))
-                    .ignoresSafeArea()
-                }
-                .frame(width: UIScreen.main.bounds.width - Constants.defaultPadding)
-                
-                NavigationLink(destination: {
-                    CartView()
-                        .navigationTitle("")
-                        .navigationBarHidden(true)
-                        .navigationBarBackButtonHidden(true)
-                        .environmentObject(CartViewModel())
-                }, label: {
-                    Circle()
-                        .fill(.pink)
-                        .frame(width: 58, height: 58)
-                        .overlay(alignment: .center, content: {
-                            Image(systemName: "cart")
+                    .padding()
+                    
+                    //deals button
+                    Button(action: {}, label: {
+                        HStack {
+                            Text("Deals")
+                                .font(.system(size: 17))
+                                .fontWeight(.bold)
+                                .foregroundColor(.black)
+                            
+                            Spacer()
+                            
+                            Image(systemName: "chevron.right")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: 22, height: 22)
-                                .foregroundColor(.white)
-                        })
-                        .overlay(alignment: .topTrailing, content: {
-                            Circle()
-                                .fill(.black)
-                                .frame(width: 22, height: 22)
-                                .overlay(
-                                    Text("4")
-                                        .font(.system(size: 17))
-                                        .fontWeight(.regular)
-                                        .foregroundColor(.white)
-                                )
-                                .padding(-5)
-                        })
-                        .padding()
-                        .clipped()
-                        .shadow(color: .black.opacity(0.25), radius: 5)
-                })
+                                .frame(width: 10, height: 10)
+                                .foregroundColor(.black)
+                        }
+                        .padding(.horizontal)
+                    })
+                    
+                    //deals scrollview
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            ForEach(restaurantsExamples) { restaurant in
+                                NavigationLink(destination: {
+                                    RestaurantView(restaurant: restaurant, categorySelected: restaurant.categories[0])
+                                        .navigationTitle("")
+                                        .navigationBarHidden(true)
+                                        .navigationBarBackButtonHidden(true)
+                                }, label: {
+                                    DealsCardView(image: restaurant.image, deliveryTime: restaurant.deliveryTime, restaurantName: restaurant.name, rating: restaurant.rating, location: restaurant.location)
+                                })
+                            }
+                        }
+                    }
+                    .padding()
+                    
+                    //explore more
+                    Button(action: {}, label: {
+                        HStack {
+                            Text("Explore More")
+                                .font(.system(size: 17))
+                                .fontWeight(.bold)
+                                .foregroundColor(.black)
+                            
+                            Spacer()
+                        }
+                    })
+                    .padding(.horizontal)
+                    .padding(.top, 30)
+                    
+                    VStack {
+                        ForEach(restaurantsExamples) { restaurant in
+                            NavigationLink(destination: {
+                                RestaurantView(restaurant: restaurant, categorySelected: restaurant.categories[0])
+                                    .navigationTitle("")
+                                    .navigationBarHidden(true)
+                                    .navigationBarBackButtonHidden(true)
+                            }, label: {
+                                ExploreMoreCardView(image: restaurant.image, deliveryTime: restaurant.deliveryTime, restaurantName: restaurant.name, location: restaurant.location, rating: restaurant.rating)
+                            })
+                        }
+                    }
+                    .padding(.horizontal)
+                }
                 
             }
+            .frame(width: UIScreen.main.bounds.width - Constants.defaultPadding)
             .navigationTitle("")
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
+            
+            NavigationLink(destination: {
+                CartView()
+                    .navigationTitle("")
+                    .navigationBarHidden(true)
+                    .navigationBarBackButtonHidden(true)
+                    .environmentObject(CartViewModel())
+            }, label: {
+                Circle()
+                    .fill(.pink)
+                    .frame(width: 58, height: 58)
+                    .overlay(alignment: .center, content: {
+                        Image(systemName: "cart")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 22, height: 22)
+                            .foregroundColor(.white)
+                    })
+                    .overlay(alignment: .topTrailing, content: {
+                        Circle()
+                            .fill(.black)
+                            .frame(width: 22, height: 22)
+                            .overlay(
+                                Text("4")
+                                    .font(.system(size: 17))
+                                    .fontWeight(.regular)
+                                    .foregroundColor(.white)
+                            )
+                            .padding(-5)
+                    })
+                    .padding()
+                    .clipped()
+                    .shadow(color: .black.opacity(0.25), radius: 5)
+//                        .offset(y: -50)
+            })
         }
     }
     
