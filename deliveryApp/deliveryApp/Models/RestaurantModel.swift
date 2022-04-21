@@ -7,21 +7,42 @@
 
 import Foundation
 
-struct Restaurant: Identifiable, Equatable {
-    var id: String = UUID().uuidString
-    
-    let name: String
-    let desc: String
-    let image: String
-    let location: String
-    let deliveryTime: Double
-    let distance: Double
-    let rating: Double
-    let categories: [FoodCategory]
-    let food: [Food]
+struct Restaurant: Identifiable, Equatable, Codable {
+    var id: String
+    var name: String
+    var desc: String
+    var image: String
+    var location: String
+    var deliveryTime: Double
+    var distance: Double
+    var rating: Double
+    var categories: [FoodCategory]
 }
 
-let restaurantsExamples: [Restaurant] = [
-    Restaurant(name: "Daily Deli", desc: "Delicious and healthy", image: "food1", location: "Lohar Town", deliveryTime: 40, distance: 1.2, rating: 4.7, categories: foodCategoriesExamples, food: foodExamples),
-    Restaurant(name: "Burger Mania", desc: "Delicious Fast-Food", image: "food4", location: "Lohar Town", deliveryTime: 50, distance: 0.5, rating: 4.3, categories: foodCategoriesExamples, food: foodExamples),
-]
+struct FoodCategory: Identifiable, Equatable, Codable {
+    var id: String
+    var name: String
+    var foods: [Food]
+}
+
+struct Food: Identifiable, Equatable, Codable {
+    var id: String
+    var name: String
+    var image: String
+    var price: Double
+    var desc: String
+    var extras: [Extra]
+    var variations: [Variation]
+}
+
+struct Extra: Identifiable, Equatable, Codable {
+    var id: String
+    var name: String
+    var price: Double
+}
+
+struct Variation: Identifiable, Equatable, Codable {
+    var id: String
+    var name: String
+    var price: Double
+}
